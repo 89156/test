@@ -26,7 +26,7 @@ img,audio{display:block;max-width:100%;margin-top:5px;border-radius:5px}
 <div id="results" style="display:none"></div>
 <script>
 let data={}
-fetch("https://gh-proxy.org/https://raw.githubusercontent.com/89156/userjs/refs/heads/main/quiz_highlight.js")
+fetch("https://gh-proxy.org/https://github.com/89156/userjs/raw/refs/heads/main/quiz_db.json")
 .then(r=>r.json()).then(d=>{data=d;document.getElementById('loading').style.display='none';document.getElementById('results').style.display='flex';show("")})
 .catch(e=>document.getElementById("loading").innerText="加载失败")
 document.getElementById("search").addEventListener("input",e=>show(e.target.value.trim()))
@@ -35,4 +35,5 @@ function show(k){let r=document.getElementById("results");r.innerHTML="";Object.
 </script>
 </body>
 </html>
+
 
